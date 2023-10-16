@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:justduit/screens/login_screen.dart';
+import 'package:justduit/screens/signup_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -29,7 +31,6 @@ class OnboardingScreen extends StatelessWidget {
                     "Let's start the journey",
                     style: TextStyle(
                       fontSize: 20,
-                      fontFamily: 'Poppins-Regular',
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
@@ -48,26 +49,42 @@ class OnboardingScreen extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Color(0xFF1E90FF)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Signupscreen()));
+                    },
                     child: Text(
                       "Get Started",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Poppins-Regular',
                         color: Colors.white,
                       ),
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 8, bottom: 15),
-                  child: Text(
-                    "I already have an account",
-                    style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins-Regular',
-                        color: Color(0xFFA4A8AE)),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: TextButton(
+                    style: ButtonStyle(
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Color(0XFFA4A8AE)),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Loginscreen()));
+                    },
+                    child: Text(
+                      "I already have an account",
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
                   ),
                 ),
               ]),
