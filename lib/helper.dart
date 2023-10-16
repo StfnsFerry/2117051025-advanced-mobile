@@ -23,7 +23,7 @@ void main() {
   // String text = message ?? "Empty";
 
   List angka = [1, 2, 3, 4, 5];
-  printList(angka);
+  printList();
 }
 
 void printList(angka) {
