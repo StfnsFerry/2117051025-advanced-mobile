@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 
 // late String? nama;
 void main() {
@@ -22,12 +22,12 @@ void main() {
 
   // String text = message ?? "Empty";
 
-  List angka = [1, 2, 3, 4, 5];
-  printList();
-}
+//   List angka = [1, 2, 3, 4, 5];
+//   printList();
+// }
 
-void printList(angka) {
-  for (int i = 0; i < angka.length; i++) {
-    print(angka[i]);
-  }
+// void printList(angka) {
+//   for (int i = 0; i < angka.length; i++) {
+//     print(angka[i]);
+//   }
 }
